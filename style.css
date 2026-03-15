@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary: #667eea;
+    --secondary: #764ba2;
+    --dark: #2d3748;
+    --light: #f7fafc;
+    --white: #ffffff;
+    --gray: #718096;
+    --gay-light: #e2e8f0;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+    --boder-radius: 10px;
+    --transition: all 0.3s ease
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    background: var(--light);
+}
+
+h1,h2,h3,h4 {
+    line-height: 1.2;
+    margin-bottom: var(--spacing-sm);
+}
+
+h1{ font-size: 2.5 rem;}
+h2{ font-size: 2 rem;}
+h3{ font-size: 1.5 rem;}
+h4{ font-size: 1.25 rem;}
+
+p{
+    margin-bottom: var(--spacing-sm);
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/*
+HEADER STYLES
+*/
+
+.navbar{
+    position: sticky;
+    top: 0;
+    background: var(--white);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+.nav-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-sm ) var(--spacing-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-size: 1.8rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nav-menu{
+    display: flex;
+    gap: var(--spacing-lg);
+    list-style: none;
+}
+
+.nav-menu a{
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-menu a::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+    width: 0px;
+    height: 3px;
+    background: var(--primary);
+    transition: width 0.3s ease ;
+}
+
+.nav-menu a:hover::after{
+    width: 100%;
+}
+
+.nav-menu a:hover:{
+    color: var(--primary);
+}
